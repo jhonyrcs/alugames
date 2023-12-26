@@ -1,0 +1,29 @@
+/* Estilos de reset para todos os elementos no documento */
+* {
+    margin: 0; /* Remover margens padrão */
+    border: 0; /* Remover bordas padrão */
+    box-sizing: border-box; /* Garantir que as dimensões incluam a borda e o preenchimento */
+}
+
+/* Estilos para listas não ordenadas (ul) */
+ul {
+    list-style: none; /* Remover os marcadores de lista padrão */
+    margin-block: 0; /* Remover margens verticais */
+    padding-inline: 0; /* Remover preenchimento horizontal */
+}
+
+/* Estilos para links (a) */
+a {
+    text-decoration: none; /* Remover sublinhado padrão nos links */
+    color: inherit; /* Herdar a cor do texto do elemento pai */
+}
+
+/* Estilos para links visitados */
+a:visited {
+    color: inherit; /* Herdar a cor do texto do elemento pai para links visitados */
+}
+
+/* Estilos para imagens (img) */
+img {
+    display: block; /* Garantir que as imagens se comportem como blocos (remover espaço extra abaixo) */
+}

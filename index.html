@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags para configuração da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluGames</title>
+
+    <!-- Link para o arquivo de estilos principal -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="body">
+    <!-- Seção principal da página -->
+    <main class="container main">
+        <!-- Logo da AluGames -->
+        <img src="img/logo.svg" alt="Logo AluGames">
+
+        <!-- Seção de divisor com barra visual -->
+        <section class="divisor">
+            <div class="divisor__line"></div>
+            <img src="img/fade_bar.svg" alt="Visual bar" class="divisor__bar">
+            <div class="divisor__line"></div>
+        </section>
+
+        <!-- Título da página -->
+        <h1 class="page-title">Aluguel de <span class="page-title__emphasis">boardgames</span></h1>
+
+        <!-- Contadores de jogos -->
+        <div class="contadores">
+            <div class="contador">
+                <h3>Total de Jogos</h3>
+                <span id="totalJogos">3</span>
+            </div>
+            <div class="contador">
+                <h3>Jogos Alugados</h3>
+                <span id="jogosAlugados">1</span>
+            </div>
+            <div class="contador">
+                <h3>Jogos Disponíveis</h3>
+                <span id="jogosDisponiveis">2</span>
+            </div>
+        </div>
+
+        <!-- Seção do painel de controle (dashboard) -->
+        <section class="dashboard">
+            <!-- Lista de itens do painel de controle -->
+            <ul class="dashboard__items">
+                <!-- Item 1 -->
+                <li class="dashboard__items__item" id="game-1">
+                    <div class="dashboard__item__img">
+                        <img src="img/monopoly.png" alt="Capa jogo Monopoly">
+                    </div>
+                    <p class="dashboard__item__name">Monopoly</p>
+                    <a onclick="alterarStatus(1)" href="#" class="dashboard__item__button">Alugar</a>
+                </li>
+
+                <!-- Item 2 -->
+                <li class="dashboard__items__item" id="game-2">
+                    <div class="dashboard__item__img">
+                        <img src="img/ticket_to_ride.png" alt="Capa jogo Ticket to Ride">
+                    </div>
+                    <p class="dashboard__item__name">Ticket to Ride</p>
+                    <a onclick="alterarStatus(2)" href="#" class="dashboard__item__button">Alugar</a>
+                </li>
+
+                <!-- Item 3 -->
+                <li class="dashboard__items__item" id="game-3">
+                    <div class="dashboard__item__img dashboard__item__img--rented">
+                        <img src="img/takenoko.png" alt="Capa jogo Takenoko">
+                    </div>
+                    <p class="dashboard__item__name">Takenoko</p>
+                    <a onclick="alterarStatus(3)" href="#"
+                        class="dashboard__item__button dashboard__item__button--return">Devolver</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Visual de hachuras -->
+        <img src="img/hachuras.svg" alt="Visual hachuras" class="hachuras">
+    </main>
+
+    <!-- Inclusão do script JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>

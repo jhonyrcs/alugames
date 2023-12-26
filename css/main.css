@@ -1,0 +1,192 @@
+/* Importações de estilos externos */
+@import url(_reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@600;700&display=swap');
+
+/* Estilos gerais para o corpo da página */
+.body {
+    color: #FFFFFF; /* Cor do texto */
+
+    min-height: 100vh; /* Altura mínima da viewport */
+
+    /* Gradiente de fundo com efeito de parallax */
+    background: rgb(0, 0, 0);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(1, 8, 14, 1) 25%, rgba(80, 94, 255, 0.85) 50%, rgba(1, 8, 14, 1) 75%, rgba(0, 0, 0, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 2rem; /* Espaçamento interno */
+}
+
+/* Estilos específicos para telas maiores (resolução de 1440px e acima) */
+@media screen and (min-width: 1440px) {
+    .body {
+        padding: 2rem calc((100vw - 1086px)/2); /* Espaçamento interno ajustado */
+    }
+}
+
+/* Estilos para a seção principal da página */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para a linha divisória */
+.divisor {
+    display: flex;
+    gap: 53px;
+    align-items: center;
+
+    margin: 44px 0px 20px;
+}
+
+/* Estilos para a linha divisória - a própria linha */
+.divisor__line {
+    height: 1px;
+    width: 282px;
+    background-color: #00F4BF; /* Cor da linha */
+}
+
+/* Estilos para o título da página */
+.page-title {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+
+    margin-bottom: 0rem;
+}
+
+/* Estilos para destacar parte do título */
+.page-title__emphasis {
+    color: #505EFF; /* Cor de destaque */
+}
+
+/* Estilos para a seção do painel de controle (dashboard) */
+.dashboard {
+    background-color: rgba(255, 255, 255, 0.1); /* Cor de fundo com transparência */
+
+    border-radius: 2rem; /* Bordas arredondadas */
+    border-width: 1px; /* Largura da borda */
+    border-style: solid; /* Estilo da borda */
+    border-color: #00F4BF; /* Cor da borda */
+
+    padding: 3rem; /* Espaçamento interno */
+    width: 100%; /* Largura total */
+}
+
+/* Estilos para a lista de itens no painel de controle */
+.dashboard__items {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos para cada item individual no painel de controle */
+.dashboard__items__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-family: 'Inter', sans-serif; /* Fonte do texto */
+}
+
+/* Estilos para a imagem de cada item no painel de controle */
+.dashboard__item__img {
+    box-shadow: 0px 0px 24px 8px rgba(24, 118, 232, 0.25); /* Sombra projetada */
+
+    margin-bottom: 1rem; /* Espaçamento inferior */
+}
+
+/* Estilos para a imagem quando o item está alugado */
+.dashboard__item__img--rented {
+    position: relative;
+}
+
+.dashboard__item__img--rented::after {
+    /* Elemento pseudo-classe para criar uma camada semi-transparente sobre a imagem */
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+
+    background-color: rgba(1, 8, 14, 0.4); /* Cor da camada semi-transparente */
+}
+
+/* Estilos para o nome do item no painel de controle */
+.dashboard__item__name {
+    font-weight: 600;
+    font-size: 2rem;
+
+    margin-bottom: 2.5rem;
+}
+
+/* Estilos para o botão do item no painel de controle */
+.dashboard__item__button {
+    display: flex;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    padding: 1rem 1.5rem;
+    min-width: 13rem;
+
+    border-radius: 1rem;
+
+    background-color: #1875E8; /* Cor de fundo padrão */
+}
+
+/* Estilos para o botão quando o item está alugado (estado de retorno) */
+.dashboard__item__button--return {
+    background-color: #01080E; /* Cor de fundo para estado de retorno */
+}
+
+/* Estilos para a seção de hachuras */
+.hachuras {
+    margin-top: 1.5rem;
+    margin-right: 33px;
+    align-self: flex-end;
+}
+
+/* Estilos para a seção de contadores */
+.contadores {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-left: 0rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para cada contador individual */
+.contador {
+    background-color: #ffffff1a; /* Cor de fundo com transparência */
+    border-radius: 1rem; /* Bordas arredondadas */
+    padding: 1rem; /* Espaçamento interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para o título do contador */
+.contador h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00F4BF; /* Cor do texto */
+}
+
+/* Estilos para o valor do contador */
+.contador span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #FFFFFF; /* Cor do texto */
+}
